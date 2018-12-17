@@ -1,18 +1,15 @@
 import { createStore } from "redux";
 import { combineReducers } from 'redux';
-import productsReducer from './reducer/mod_1'
-import cartReducer from './reducer/mod_2'
+import productsReducer from './reducer/product'
+import cartReducer from './reducer/car'
 
 const allReducers = {
     products: productsReducer,
     shoppingCart: cartReducer
-}
-
+  }
+  
 const rootReducer = combineReducers(allReducers);
 
-let store = createStore(rootReducer);
-
-console.log("initial state: ", store.getState());
+const store = createStore(rootReducer);
 
 export default store
-
